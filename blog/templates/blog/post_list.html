@@ -4,6 +4,14 @@
     </head>
     <body>
         <h1> Welcome to the blog</h1><br>
+        {{ posts }}
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h2><a href="">{{ post.title }}</a></h2>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
         I am very deligted to see you here. Hope you enjoy the site.
         <p>
         This site is under construction. Please wait for me to complete the site. :)
